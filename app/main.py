@@ -34,6 +34,8 @@ def main():
                 os.mkdir(folder_path)
             with open(f"{folder_path}/{hashed_file_name}", "wb") as hf:
                 hf.write(zlib.compress(to_be_hashed))
+    elif command == "ls-tree":
+        
 
     else:
         raise RuntimeError(f"Unknown command #{command}")
